@@ -19,6 +19,8 @@
 
 # production
 /build
+/content/**/*.png
+/content/**/*.jpg
 
 # misc
 .DS_Store
