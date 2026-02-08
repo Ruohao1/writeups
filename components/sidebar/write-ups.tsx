@@ -17,7 +17,13 @@ import {
   SidebarMenuSub,
   SidebarMenuSubButton,
   SidebarMenuSubItem,
+  useSidebar,
 } from "@/components/ui/sidebar"
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
 
 export function NavWriteups({
   groups,
@@ -39,22 +45,44 @@ export function NavWriteups({
     }[]
   }[]
 }) {
+  const { state } = useSidebar()
+  const isCollapsed = state === "collapsed"
+
   return (
     <>
       {groups.map((group) => (
         <SidebarGroup key={group.label}>
-          <SidebarGroupLabel className="flex items-center gap-2 transition-colors hover:bg-accent hover:text-accent-foreground">
+          <SidebarGroupLabel className="flex items-center gap-2 transition-colors hover:bg-accent hover:text-accent-foreground group-data-[collapsible=icon]:opacity-100 group-data-[collapsible=icon]:-mt-0">
             {group.href ? (
-              <Link
-                href={group.href}
-                className="flex items-center gap-2 "
-              >
-                {group.icon && <group.icon className="h-4 w-4" />}
-                {!group.icon && group.iconSrc && (
-                  <img src={group.iconSrc} className="h-4 w-4" />
-                )}
-                <span>{group.label}</span>
-              </Link>
+              isCollapsed ? (
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Link
+                      href={group.href}
+                      className="flex h-8 w-8 items-center justify-center transition-colors cursor-pointer"
+                    >
+                      {group.icon && <group.icon className="h-4 w-4" />}
+                      {!group.icon && group.iconSrc && (
+                        <img src={group.iconSrc} className="h-4 w-4" />
+                      )}
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent side="right">
+                    {group.label}
+                  </TooltipContent>
+                </Tooltip>
+              ) : (
+                <Link
+                  href={group.href}
+                  className="flex items-center gap-2 px-2 py-1 cursor-pointer"
+                >
+                  {group.icon && <group.icon className="h-4 w-4" />}
+                  {!group.icon && group.iconSrc && (
+                    <img src={group.iconSrc} className="h-4 w-4" />
+                  )}
+                  <span>{group.label}</span>
+                </Link>
+              )
             ) : (
               <>
                 {group.icon && <group.icon className="h-4 w-4" />}
@@ -65,7 +93,7 @@ export function NavWriteups({
               </>
             )}
           </SidebarGroupLabel>
-          <SidebarMenu>
+          <SidebarMenu className="group-data-[collapsible=icon]:hidden">
             {group.items.map((item) => (
               <Collapsible
                 key={item.title}
