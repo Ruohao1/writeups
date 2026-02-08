@@ -43,11 +43,11 @@ export function NavWriteups({
     <>
       {groups.map((group) => (
         <SidebarGroup key={group.label}>
-          <SidebarGroupLabel className="flex items-center gap-2">
+          <SidebarGroupLabel className="flex items-center gap-2 transition-colors hover:bg-accent hover:text-accent-foreground">
             {group.href ? (
               <Link
                 href={group.href}
-                className="flex items-center gap-2 transition-colors hover:text-accent"
+                className="flex items-center gap-2 "
               >
                 {group.icon && <group.icon className="h-4 w-4" />}
                 {!group.icon && group.iconSrc && (
