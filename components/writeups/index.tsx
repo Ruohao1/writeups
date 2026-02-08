@@ -11,6 +11,7 @@ const CATEGORY_FALLBACK = "Misc"
 const PLATFORM_ICONS: Record<string, string> = {
   TryHackMe: "https://tryhackme.com/favicon.svg",
   HackTheBox: "https://app.hackthebox.com/favicon.ico",
+  "NCC CTF": "/branding/ncc-ctf.png",
 }
 
 function formatDate(value: string | null) {
