@@ -1,3 +1,5 @@
+<!-- frontmatter: {"title":"Dogcat","date":"2026-02-07","platform":"TryHackMe","category":"Web","difficulty":"Medium","tags":["lfi","rce","docker","privesc"],"summary":"LFI to log poisoning RCE, container privesc, and host escape via writable backup script.","image":"/tryhackme/dogcat/index.png"} -->
+
 # Dogcat CTF
 
 ## TL;DR
@@ -12,7 +14,7 @@
 
 ## Recon
 
-![](/dogcat/index.png)
+![](/tryhackme/dogcat/index.png)
 
 ### Port scan
 
@@ -211,4 +213,3 @@ cat flag4.txt
 ```
 
 Commentary: This is a **build/backup pipeline abuse**—executable under higher privileges outside the container boundary. Integrity of scripts under `/opt/backups` must be enforced with permissions and signing.
-

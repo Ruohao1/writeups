@@ -1,3 +1,4 @@
+<!-- frontmatter: {"title":"Ultratech","date":"2026-02-07","platform":"TryHackMe","category":"Web","difficulty":"Medium","tags":["rce","nodejs","docker","hashes","privesc"],"summary":"Command injection in a Node.js ping endpoint leads to shell access and Docker group escalation to root.","image":"/tryhackme/ultratech/crackstation.png"} -->
 
 # UltraTech CTF
 
@@ -127,7 +128,7 @@ strings utech.db.sqlite
 
 ### Crack hashes (raw MD5)
 
-![](/ultratech/crackstation.png)
+![](/tryhackme/ultratech/crackstation.png)
 Using Crack station, we cracked `r00t` password
 
 - `f357a0c52799563c7c7b76c1e7543a32` → **n100906**

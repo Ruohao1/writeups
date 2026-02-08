@@ -9,7 +9,7 @@ const withMDX = nextMDX({
   extension: /\.mdx?$/,
   options: {
     remarkPlugins: [],
-    rehypePlugins: [['rehype-pretty-code', options], 'rehype-slug'],
+    rehypePlugins: [["rehype-pretty-code", options], "rehype-slug"],
   },
 });
 

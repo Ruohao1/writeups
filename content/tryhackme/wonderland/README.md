@@ -1,3 +1,5 @@
+<!-- frontmatter: {"title":"Wonderland","date":"2026-02-07","platform":"TryHackMe","category":"Linux","difficulty":"Medium","tags":["ssh","sudo","path-injection","capabilities","privesc"],"summary":"Credential leak to SSH, Python module hijack, PATH injection, and cap_setuid abuse to reach root."} -->
+
 # Wonderland CTF
 
 ## Scope & Target

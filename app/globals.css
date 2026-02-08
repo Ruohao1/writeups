@@ -39,13 +39,13 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --radius-2xl: calc(var(--radius) + 8px);
-  --radius-3xl: calc(var(--radius) + 12px);
-  --radius-4xl: calc(var(--radius) + 16px);
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+  --radius-3xl: 0px;
+  --radius-4xl: 0px;
 }
 
 :root {
@@ -72,7 +72,7 @@
   --chart-3: oklch(0.70 0.15 162);
   --chart-4: oklch(0.60 0.13 163);
   --chart-5: oklch(0.51 0.10 166);
-  --radius: 0.45rem;
+  --radius: 0px;
   --sidebar: oklch(0.985 0.002 247.839);
   --sidebar-foreground: oklch(0.13 0.028 261.692);
   --sidebar-primary: oklch(0.60 0.13 163);
@@ -115,6 +115,7 @@
   --sidebar-accent-foreground: oklch(0.26 0.05 173);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
+  --radius: 0px;
 }
 
 /* Optional: nicer code block container */
@@ -130,7 +131,7 @@
   background: rgb(24 24 27);
   border: 1px solid rgb(39 39 42);
   padding: 0.1rem 0.35rem;
-  border-radius: 0.4rem;
+  border-radius: 0;
 }
 
 @layer base {

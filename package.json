@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "gen:content": "node scripts/generate-content-map.mjs",
-    "dev": "npm run gen:content && next dev",
-    "build": "npm run gen:content && next build",
+    "dev": "npm run gen:content && NEXT_DISABLE_TURBOPACK=1 next dev",
+    "build": "npm run gen:content && NEXT_DISABLE_TURBOPACK=1 next build",
     "start": "next start",
     "lint": "eslint"
   },
