@@ -4,7 +4,7 @@
      "platform":"NCC CTF",
      "event":"MasterCard CTF",
      "category":"Crypto",
-     "difficulty":"",
+     "difficulty":"Easy",
      "tags":["rsa","small-exponent"],
      "summary":"Recovered plaintext from RSA ciphertext using a small public exponent.",
      "image":""
