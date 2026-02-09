@@ -16,8 +16,6 @@
 
 - **Entry:** Given RSA public key and ciphertext.
 - **Execution:** Exploited small public exponent to recover plaintext.
-- **PrivEsc:** N/A
-- **Loot:** Flag/decoded message.
 
 ---
 
@@ -43,8 +41,7 @@ The public exponent is very small (`e = 3`). If the plaintext is smaller than `N
 
 ### Python script
 
-```bash
-python3 - <<'PY'
+```python
 from math import isclose
 
 N = 70087612095750802474897782193572548414816066721658934639912019535626078836689713180829570834356785932346097956924149891700885636347663313952280519745372333068889789077175105024332746071227475899981520076492499497191481633709596370726408644988407245197419937312130298549692640939517168588306394339920712150347
@@ -62,7 +59,6 @@ def iroot3(n):
 m = iroot3(c)
 print(m)
 print(m.to_bytes((m.bit_length() + 7) // 8, "big"))
-PY
 ```
 
 ### Online tool

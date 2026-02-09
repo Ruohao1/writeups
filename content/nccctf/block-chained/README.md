@@ -33,7 +33,7 @@ sM7djKrLxaSwnemwisWNsLWe57DvneGEkJ3JsKedy536ntKpgcvfi+rPi5Lerb7v3q2+796tvu/erb7v
 
 The payload is base64 text that becomes repeating 16-byte blocks after decoding. 
 
-![](./block-chained/cyberchef_deadbeef.png)
+![](./nccctf/block-chained/cyberchef_deadbeef.png)
 
 The solution hints at a fixed XOR mask (`deadbeef`) repeated across each block; once the correct mask length is used, the plaintext becomes readable.
 

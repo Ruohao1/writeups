@@ -14,7 +14,7 @@
 
 ## TL;DR
 
-- **Entry:** Encrypted API responses in AES-CTR with a single global nonce/key.
+- **Entry:** Encrypted API responses in AES-CTR with a single global nonce.
 - **Execution:** Use a known-plaintext response to recover the keystream, decrypt `/wallets/all`, then send funds to the admin wallet to leak the flag message.
 
 ---
