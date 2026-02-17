@@ -145,7 +145,8 @@ const entries = [];
 const topLevelDirs = fs
   .readdirSync(contentDir, { withFileTypes: true })
   .filter((e) => e.isDirectory())
-  .map((e) => e.name);
+  .map((e) => e.name)
+  .filter((name) => !name.startsWith("."));
 
 for (const dir of topLevelDirs) {
   const dirAbs = path.join(contentDir, dir);
@@ -164,7 +165,8 @@ for (const dir of topLevelDirs) {
   const slugDirs = fs
     .readdirSync(dirAbs, { withFileTypes: true })
     .filter((e) => e.isDirectory())
-    .map((e) => e.name);
+    .map((e) => e.name)
+    .filter((name) => !name.startsWith("."));
 
   for (const slug of slugDirs) {
     const folderAbs = path.join(dirAbs, slug);
